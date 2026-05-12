@@ -1,0 +1,112 @@
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: flex-start;
+}
+
+/* 左　画像エリア */
+.image-area {
+    width: 50%;
+}
+
+.image-content img {
+    width: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.image-content {
+    width: 300px;
+    height: 300px;
+    background: gray;
+    margin: 30px;
+
+}
+
+/* 右　商品情報エリア */
+.product-detail {
+    width: 50%;
+    padding: 30px 20px;
+
+}
+
+.product-meta {
+    margin-left: 0;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.brand-name {
+    font-size: 12px;
+}
+
+.reaction-area {
+    display: flex;
+}
+
+.like-container {
+    margin-left: 20px;
+}
+
+.comment-container {
+    margin-left: 20px;
+}
+
+.purchase-submit__btn {
+    background: #FE5454;
+    padding: 5px 70px;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.product-category {
+    display: flex;
+}
+
+.product-status {
+    display: flex;
+}
+
+.product-comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-count {
+    color: #6E6E6E;
+}
+
+.comment-label {
+    font-weight: bold;
+}
+
+.comment-area {
+    background: #E2E2E2;
+    border-radius: 3px;
+    padding: 10px 30px;
+    font-size: 14px;
+
+}
+
+.product-comment__area input {
+    height: 50px;
+}
+
+.product-comment__submit {
+    margin-top: 30px;
+    background: #FE5454;
+    padding: 5px 70px;
+    border-radius: 2px;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}

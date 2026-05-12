@@ -1,0 +1,45 @@
+.header {
+    background: #000;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.header-nav__item--login {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav__item--mypage {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-nav__item--sell {
+    text-decoration: none;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: #000;
+}
+
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 40px;
+}

@@ -1,0 +1,151 @@
+.all-contents {
+    display: flex;
+    max-width: 1300px;
+    height: 95vh;
+}
+
+.left-contents {
+    width: 60%;
+    padding: 30px;
+}
+
+.right-contents {
+    width: 30%;
+    padding: 30px;
+}
+
+.product-area {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.img-content {
+    width: 130px;
+    height: 130px;
+    background: gray;
+    margin-bottom: 20px;
+}
+
+.img-content image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    margin-left: 20px;
+}
+
+.product-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-payment {
+    display: flex;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.product-payment {
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+}
+
+.product-payment__input {
+    margin-left: 30px;
+}
+
+.product-payment__input-item {
+    width: 40%;
+    border-radius: 3px;
+    padding: 2px;
+    color: #696969;
+    border-color: #696969;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+select option {
+    color: #000;
+    /* 文字色（なぜかきかない */
+    background-color: #61676D;
+    /* 背景色 */
+}
+
+option[selected][disabled] {
+    display: none;
+}
+
+.delivery-info {
+    padding: 10px;
+}
+
+.delivery-info {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.delivery-info__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #1F7FD8;
+}
+
+.delivery-info__body {
+    padding: 10px 30px;
+}
+
+.check-area {
+    display: flex;
+    flex-flow: column;
+}
+
+.product-price-check {
+    display: flex;
+    border: 1px solid #000;
+    padding: 30px;
+}
+
+.product-price-check span {
+    font-size: 15px;
+}
+
+.product-payment-check {
+    display: flex;
+    border: 1px solid #000;
+    padding: 30px;
+    margin-top: -1px;
+}
+
+.product-payment-check span {
+    font-size: 15px;
+}
+
+.form-btn {
+    padding: 10px 0;
+    margin-top: 50px;
+
+}
+
+.form-btn__submit {
+    width: 100%;
+    padding: 7px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    background: #FE5454;
+    border: none;
+    border-radius: 3px;
+}

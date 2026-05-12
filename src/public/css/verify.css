@@ -1,0 +1,46 @@
+/* ヘッダー */
+.header {
+    background: #000;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 10px 15px;
+    max-width: 1230px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+/* メイン */
+.result-content {
+    text-align: center;
+    padding: 40px 30px;
+    max-width: 1200px;
+}
+
+.result-text {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.verify-btn {
+    margin: 30px;
+}
+
+.verify-btn-submit {
+    padding: 8px 18px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 0.7px solid #000;
+    border-radius: 5px;
+    background: #D9D9D9;
+}
+
+.resend-link-item {
+    margin-top: 20px;
+    text-decoration: none;
+    color: #1F7FD8;
+}
