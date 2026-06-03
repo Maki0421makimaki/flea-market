@@ -5,45 +5,36 @@
 @endsection
 
 @section('content')
+
     <div class="container">
         <div class="main">
-            <!-- タイトル -->
             <div class="menu-tab">
-                <a class="menu-tab__item-recommend" href="/login">おすすめ</a>
-                <a class="menu-tab__item-mylist" href="/login">マイリスト</a>
+                <a href="{{ route('items.index', ['tab' => 'recommend']) }}"
+                    class="tab-recommend {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
+                <a href="{{ route('items.index', ['tab' => "mylist"]) }}"
+                    class="tab-mylist {{ $tab === 'mylist' ? 'active' : '' }}">マイリスト</a>
             </div>
 
             <hr>
 
-
-            <!-- 商品一覧 あとで繰り返す -->
             <div class="product-list">
                 @foreach ($products as $product)
-                    <a href="/item/{{ $product->item_id }}">
-                        <div class="product-card">
-                            <img src="" alt="">
-                            <div class="product-info">
-                                <p>{{ $product->name}}</p>
+                    <div class="product-content">
+                        <a href="/item/{{ $product->id }}" class="product-link">
+                            <div class="product-card">
+                                <img src="{{ asset('storage/' . $product->image) }}" alt="商品画像">
+                                <div class="product-info">
+                                    <p>{{ $product->name}}</p>
+                                </div>
+                                @if ($product->purchase)
+                                    <span>sold</span>
+                                @endif
                             </div>
-                        </div>
-                    </a>
-                @endforeach
-
-            </div>
-
-            <div class="product-list">
-                @foreach ($products as $product)
-                    <a href="/products/detail/{{ $product->id }}">
-                        <div class="product-card">
-                            <img src="{{ asset('storage/' . $product->image) }}">
-                            <div class="product-info">
-                                <p>{{ $product->name }}</p>
-                                <p>¥{{ number_format($product->price) }}</p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 @endforeach
             </div>
+
         </div>
     </div>
 @endsection

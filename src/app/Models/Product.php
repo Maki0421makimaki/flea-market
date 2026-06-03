@@ -10,18 +10,19 @@ class Product extends Model
     use HasFactory;
     protected $fillable = [
         'image',
+        'product_status_id',
         'name',
         'brand_name',
         'description',
         'price',
     ];
 
-    public function product()
+    public function user()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(User::class);
     }
 
-    public function status()
+    public function productStatus()
     {
         return $this->belongsTo(ProductStatus::class);
     }
@@ -36,9 +37,9 @@ class Product extends Model
         return $this->hasMany(Like::class);
     }
 
-    public function purchases()
+    public function purchase()
     {
-        return $this->hasMany(Purchase::class);
+        return $this->hasOne(Purchase::class);
     }
 
     public function categories()

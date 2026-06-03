@@ -12,14 +12,14 @@
                 <div class="address-change__heading">
                     <h1>住所の変更</h1>
                 </div>
-                <form class="form" action="/？？？？" method="post">
+                <form class="form" action="/purchase/address/{{ $item_id }}" method="post">
                     @csrf
                     <div class="form__group">
                         <div class="form__group--title">
                             <label for="postcode">郵便番号</label>
                         </div>
                         <div class="form__group--content">
-                            <input type="text" id="postcode" name="postcode">
+                            <input type="text" id="post_code" name="post_code" value="{{ old('post_code') }}">
                         </div>
                     </div>
 
@@ -28,7 +28,7 @@
                             <label for="address">住所</label>
                         </div>
                         <div class="form__group--content">
-                            <input type="text" id="address" name="address">
+                            <input type="text" id="address" name="address" value="{{ old('address') }}">
                         </div>
                     </div>
 
@@ -37,7 +37,7 @@
                             <label for="building">建物名</label>
                         </div>
                         <div class="form__group--content">
-                            <input type="text" id="building" name="building">
+                            <input type="text" id="building" name="building" value="{{ old('building') }}">
                         </div>
                     </div>
 

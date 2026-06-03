@@ -16,8 +16,20 @@ h1 {
 .image-display {
     width: 100px;
     height: 100px;
-    background-color: #d9d9d9;
+    background: #d9d9d9;
     border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.image-display img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
 }
 
 .image-upload__label {
@@ -40,7 +52,6 @@ h1 {
 .image-upload__input {
     display: none;
 }
-
 
 .form {
     margin: 0 auto;

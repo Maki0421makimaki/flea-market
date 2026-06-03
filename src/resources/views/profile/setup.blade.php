@@ -9,7 +9,7 @@
     <div class="profile-form__heading">
         <h1>プロフィール設定</h1>
     </div>
-    <form class="form" action="/？？？？" method="post" enctype="multipart/form-data">
+    <form class="form" action="/mypage" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form__group">
             <div class="form__group--image">
@@ -31,7 +31,7 @@
 
         <div class="form__group">
             <div class="form__group--title">
-                <label for="post_code">郵便番号</label>
+                <label for="postcode">郵便番号</label>
             </div>
             <div class="form__group--content">
                 <input type="text" id="post_code" name="post_code">

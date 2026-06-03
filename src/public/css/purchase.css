@@ -25,12 +25,17 @@
     height: 130px;
     background: gray;
     margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.img-content image {
-    width: 100%;
+.img-content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .product-info {

@@ -56,11 +56,36 @@ hr {
     padding: 30px 40px;
 }
 
+.detail-category {
+    margin-bottom: 20px;
+}
+
 .detail-category__title {
     display: flex;
     font-weight: bold;
     font-size: 20px;
     padding: 15px 0px;
+}
+
+.category__item {
+    display: none;
+}
+
+.category__item:checked + .category__item-name{
+    background-color: #FE5454;;
+    color: white;
+        
+}
+
+.category__item-name {
+    display: inline-block;
+    padding: 3px 11px;
+    color: #FE5454;
+    border: 2px solid #FE5454;
+    border-radius: 14px;
+    font-size: 14px;
+    margin: 10px 5px ;
+
 }
 
 .item-form__detail-status {

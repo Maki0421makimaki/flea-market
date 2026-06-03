@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,15 +23,22 @@
             <div class="register-form__heading">
                 <h1>会員登録</h1>
             </div>
-            <form class="form" action="/？？？？" method="post">
+            <form class="form" action="/register" method="post">
                 @csrf
                 <div class="form__group">
                     <div class="form__group--title">
                         <label for="username">ユーザー名</label>
                     </div>
                     <div class="form__group--content">
-                        <input type="text" id="name" name="name">
+                        <input type="text" id="name" name="name" value="{{ old('name') }}">
                     </div>
+                    <p class="register-form__error-message">
+                    @if ($errors->has('name'))
+                        @foreach($errors->get('name') as $message)
+                            {{ $message }}
+                        @endforeach
+                    @endif
+                    </p>
                 </div>
 
                 <div class="form__group">
@@ -38,8 +46,15 @@
                         <label for="email">メールアドレス</label>
                     </div>
                     <div class="form__group--content">
-                        <input type="email" id="email" name="email">
+                        <input type="email" id="email" name="email" value="{{ old('email') }}">
                     </div>
+                    <p class="register-form__error-message">
+                        @if ($errors->has('email'))
+                            @foreach($errors->get('email') as $message)
+                                {{ $message }}
+                            @endforeach
+                        @endif
+                    </p>
                 </div>
 
                 <div class="form__group">
@@ -49,15 +64,29 @@
                     <div class="form__group--content">
                         <input type="password" id="password" name="password">
                     </div>
+                    <p class="register-form__error-message">
+                        @if ($errors->has('password'))
+                            @foreach($errors->get('password') as $message)
+                                {{ $message }}
+                            @endforeach
+                        @endif
+                    </p>
                 </div>
 
                 <div class="form__group">
                     <div class="form__group--title">
-                        <label for="confirm-password">確認用パスワード</label>
+                        <label for="password_confirmation">確認用パスワード</label>
                     </div>
                     <div class="form__group--content">
-                        <input type="password" id="" name="confirm-password">
+                        <input type="password" id="" name="password_confirmation">
                     </div>
+                    <p class="register-form__error-message">
+                    @if ($errors->has('password_confirmation'))
+                        @foreach($errors->get('password_confirmation') as $message)
+                            {{ $message }}
+                        @endforeach
+                    @endif
+                    </p>
                 </div>
 
 
@@ -69,10 +98,10 @@
                     <div class="login-link">
                         <a href="/login" class="login-link__item">ログインはこちら</a>
                     </div>
-                </div>   
+                </div>
             </form>
         </div>
     </main>
 </body>
-</html>
 
+</html>

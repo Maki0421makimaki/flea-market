@@ -15,13 +15,20 @@
         <div class="header__inner">
             <div class="header-utilities">
                 <a href="/"><img src="{{ asset('images/COACHTECHヘッダーロゴ.png')}}" alt="サイトのロゴ"></a>
-                <form action="/" method="get" class="search-form">
-                <input type="text" name="" placeholder="なにをお探しですか？">
+                <form action="{{ route('items.index') }}" method="get" class="search-form">
+                    <input type="text" name="keyword" value="{{ old('keyword', $keyword ?? '') }}" placeholder="なにをお探しですか？">
                 </form>
                 <nav>
                     <ul class="header-nav">
-                        <li class="header-nav">
-                            <a class="header-nav__item--login" href="/">ログアウト</a>
+                        <li>
+                            @auth
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button class="header-nav__item--logout">ログアウト</button>
+                                </form>
+                            @else
+                                <a class="header-nav__item--login" href="/login">ログイン</a>
+                            @endauth
                         </li>
                         <li class="header-nav__item">
                             <a class="header-nav__item--mypage" href="/mypage">マイページ</a>

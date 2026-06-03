@@ -19,7 +19,7 @@ class CreateProductsTable extends Migration
             $table->foreignId('product_status_id')->constrained()->cascadeOnDelete();
             $table->string('image');
             $table->string('name');
-            $table->string('brand_name');
+            $table->string('brand_name')->nullable();
             $table->text('description');
             $table->integer('price')->unsigned()->default(0);
             $table->timestamps();

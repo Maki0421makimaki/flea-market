@@ -23,11 +23,16 @@
                 登録していただいたメールアドレス認証メールを送付しました。<br>メール認証を完了してください。
             </p>
             <div class="verify-btn">
-                <button class="verify-btn-submit" type="submit">認証はこちらから</button>
+                <a class="verify-btn__item" href="https://mailtrap.io/" target="_blank">
+                    認証はこちら
+                </a>
             </div>
-            <div class="resend-link">
-                <a href="/??" class="resend-link-item">認証メールを再送する</a>
-            </div>
+            <form method="POST" action="{{ route('verification.send') }}">
+                @csrf
+                <button type="submit"  class="resend-link-item">
+                    認証メールを再送する
+                </button>
+            </form>
         </div>
     </main>
 </body>

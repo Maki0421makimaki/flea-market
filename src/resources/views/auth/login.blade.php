@@ -25,15 +25,22 @@
                 <div class="login-form__heading">
                     <h1>ログイン</h1>
                 </div>
-                <form class="form" action="/？？？？" method="post">
+                <form class="form" action="/login" method="post">
                     @csrf
                     <div class="form__group">
                         <div class="form__group--title">
                             <label for="email">メールアドレス</label>
                         </div>
                         <div class="form__group--content">
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" value="{{ old('email') }}">
                         </div>
+                        <p class="login-form__error-message">
+                            @if ($errors->has('email'))
+                                @foreach($errors->get('email') as $message)
+                                    {{ $message }}
+                                @endforeach
+                            @endif
+                        </p>
                     </div>
 
                     <div class="form__group">
@@ -43,6 +50,13 @@
                         <div class="form__group--content">
                             <input type="password" id="password" name="password">
                         </div>
+                        <p class="login-form__error-message">
+                            @if ($errors->has('password'))
+                                @foreach($errors->get('password') as $message)
+                                    {{ $message }}
+                                @endforeach
+                            @endif
+                        </p>
                     </div>
 
 

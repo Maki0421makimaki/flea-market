@@ -1,0 +1,120 @@
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: center;
+    gap: 200px
+
+}
+
+.user-info-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 130px;
+    height: 130px;
+    background: gray;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+.user-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.user-name {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 40px;
+}
+
+.profile-edit {
+    display: inline-block;
+    padding: 5px 20px;
+    color: #FE5454;
+    border: 1.5px solid #FE5454;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.profile-edit__link {
+    text-decoration: none;
+    color: #FE5454;
+}
+
+hr {
+    padding: 20px 0;
+    border: none;
+    border-top: 2px solid #000;
+}
+
+.menu-tab {
+    padding: 30px 0 0;
+}
+
+.tab-sell-list {
+    margin: 40px 30px 10px 170px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.tab-purchased-list {
+    margin: 40px 40px 30px;
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.active {
+    color: red;
+    font-weight: bold;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 35px;
+}
+
+.product-content {
+    margin: 20px;
+    width: 300px;
+}
+
+.product-info {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.product-link {
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    margin-top: 0px;
+}
+
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+}

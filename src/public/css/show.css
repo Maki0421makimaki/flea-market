@@ -53,6 +53,16 @@
     margin-left: 20px;
 }
 
+.like-btn {
+    border: none;
+    background: #fff;
+}
+
+.comment-btn {
+    border: none;
+    background: #fff;
+}
+
 .comment-container {
     margin-left: 20px;
 }
@@ -98,6 +108,38 @@
 
 .product-comment__area input {
     height: 50px;
+}
+
+.comment__error-message {
+    color: #FE5454;
+}
+
+.user-info {
+    display:flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-icon {
+    width: 60px;
+    height: 60px;
+    background: gray;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-content image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
 }
 
 .product-comment__submit {

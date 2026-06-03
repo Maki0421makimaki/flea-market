@@ -76,3 +76,7 @@ h1 {
     font-size: 13px;
     color: #1a81d4;
 }
+
+.login-form__error-message {
+    color: #FE5454;
+}
