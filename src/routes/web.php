@@ -34,15 +34,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/purchase/address/{item_id}', [AddressController::class, 'update']);
 
-
-    // マイページ
     Route::get('/mypage', [MypageController::class, 'index'])->name('mypage.index');
 
     Route::get('/mypage/profile', [ProfileController::class, 'edit']);
 
     Route::post('/mypage', [ProfileController::class, 'update']);
 
-    // 出品
     Route::get('/sell', [SellController::class, 'show']);
 
     Route::post('/sell', [SellController::class, 'create']);

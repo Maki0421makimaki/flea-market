@@ -23,8 +23,6 @@
                 </div>
             </div>
 
-
-            <!-- 出品と購入の切り替え -->
             <div class="menu-tab">
                 <a href="{{ route('mypage.index', ['page' => 'sell']) }}"
                     class="tab-sell-list {{ $page === 'sell' ? 'active' : '' }}">出品した商品</a>

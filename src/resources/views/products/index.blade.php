@@ -9,9 +9,16 @@
     <div class="container">
         <div class="main">
             <div class="menu-tab">
-                <a href="{{ route('items.index', ['tab' => 'recommend']) }}"
+                <a href="{{ route('items.index', [
+                    'tab' => 'recommend',
+                    'keyword' => request('keyword')
+                ]) }}"
                     class="tab-recommend {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
-                <a href="{{ route('items.index', ['tab' => "mylist"]) }}"
+
+                <a href="{{ route('items.index', [
+                    'tab' => 'mylist',
+                    'keyword' => request('keyword')
+                ]) }}"
                     class="tab-mylist {{ $tab === 'mylist' ? 'active' : '' }}">マイリスト</a>
             </div>
 

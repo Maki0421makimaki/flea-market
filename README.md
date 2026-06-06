@@ -1,4 +1,19 @@
 # flea-market
+## アプリ概要
+
+フリマアプリを模したWebアプリケーションです。
+
+### 主な機能
+- 会員登録
+- ログイン認証
+- メール認証
+- 商品出品
+- 商品検索
+- いいね機能
+- コメント機能
+- 商品購入機能
+- Stripe決済
+- プロフィール変更
 
 ## 環境構築
 **Dockerビルド**
@@ -9,7 +24,7 @@
 **Laravel環境構築**
 1. `docker-compose exec php bash`
 2. `composer install`
-3. `cp .env.example .env`、「.env.example」ファイルを 「.env」ファイルに命名を変更。
+3. `cp .env.example .env`、「.env.example」をコピーして「.env」を作成します。
 4. .envに以下の環境変数を追加
 ```text
 DB_CONNECTION=mysql
@@ -31,7 +46,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 STRIPE_PUBLIC_KEY=各自のStripe公開可能キー
 STRIPE_SECRET_KEY=各自のStripeシークレットキー
 ```
-※本アプリではMailtrapとtripeを利用しています。
+※本アプリではMailtrapとStripeを利用しています。
 各自アカウントを作成し、認証情報を取得して設定してください。
 
 
@@ -53,17 +68,42 @@ php artisan db:seed
 ```bash
 php artisan config:clear
 ```
+## テスト
+
+### テスト実行
+
+```bash
+php artisan test
+```
+
+### 実装済みテスト
+- 会員登録バリデーション
+- ログインバリデーション
+- ログアウト機能
+- 商品一覧表示
+- 商品検索
+- マイリスト表示
+- 商品詳細情報表示
+- いいね機能
+- 商品購入機能
+- 支払い方法選択機能
+- 配送先変更機能
+- プロフィール表示
+- 出品機能
+- メール認証機能
 
 ## 使用技術(実行環境)
-- PHP8.3.0
-- Laravel8.83.27
-- MySQL8.0.26
+- PHP 8.1.34
+- Laravel 8.83.8
+- MySQL 8.0.26
+- nginx 1.21.1
 
 ## ER図
 ![ER図](src/public/images/flea-market-er-diagram.drawio.png)
 
 ## URL
 - 商品一覧画面：http://localhost/
+- 商品詳細画面：http://localhost/item/{item_id}
 - ログイン画面：http://localhost/login
 - 会員登録画面：http://localhost/register
 - phpMyAdmin:：http://localhost:8080/
