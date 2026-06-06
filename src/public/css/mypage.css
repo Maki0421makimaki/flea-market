@@ -81,11 +81,6 @@ hr {
     font-size: 22px;
 }
 
-.active {
-    color: red;
-    font-weight: bold;
-}
-
 .product-list {
     display: flex;
     flex-wrap: wrap;
@@ -117,4 +112,10 @@ p {
     height: 300px;
     border-radius: 5px;
     object-fit: cover;
+}
+
+.tab-sell-list.active,
+.tab-purchased-list.active {
+    color: red;
+    font-weight: bold;
 }

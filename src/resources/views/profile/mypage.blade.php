@@ -26,10 +26,10 @@
 
             <!-- 出品と購入の切り替え -->
             <div class="menu-tab">
-                <a href="{{ route('mypage.index', ['tab' => 'sell']) }}"
-                    class="tab-sell-list {{ $tab === 'sell' ? 'active' : '' }}">出品した商品</a>
-                <a href="{{ route('mypage.index', ['tab' => "purchased"]) }}"
-                    class="tab-purchased-list {{ $tab === 'purchased' ? 'active' : '' }}">購入した商品</a>
+                <a href="{{ route('mypage.index', ['page' => 'sell']) }}"
+                    class="tab-sell-list {{ $page === 'sell' ? 'active' : '' }}">出品した商品</a>
+                <a href="{{ route('mypage.index', ['page' => "buy"]) }}"
+                    class="tab-purchased-list {{ $page === 'buy' ? 'active' : '' }}">購入した商品</a>
             </div>
 
             <hr>
@@ -38,7 +38,7 @@
                 @foreach ($products as $item)
                     <div class="product-content">
 
-                        @if ($tab === 'purchased')
+                        @if ($page === 'buy')
                             <a href="/item/{{ $item->product->id }}" class="product-link">
                                 <div class="product-card">
                                     <img src="{{ asset('storage/' . $item->product->image) }}" alt="商品画像">

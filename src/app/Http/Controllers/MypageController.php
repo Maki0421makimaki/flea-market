@@ -13,19 +13,16 @@ class MypageController extends Controller
         $image = $user->profile?->image;
         $name = $user->profile->name;
 
-        $tab = $request->query('tab', 'sell');
+        $page = $request->query('page', 'sell');
 
-        if ($tab === 'purchased') {
+        if ($page === 'buy') {
             $products = $user->purchases()->with('product')->get();
         } else {
             $products = $user->products()->with('purchase')->get();
         }
 
-        return view('profile.mypage', compact('image', 'name', 'products', 'tab'));
+        return view('profile.mypage', compact('image', 'name', 'products', 'page'));
 
     }
-
-    
-
 
 }
