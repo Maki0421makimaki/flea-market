@@ -18,8 +18,15 @@
 ## 環境構築
 **Dockerビルド**
 1. `git clone git@github.com:Maki0421makimaki/flea-market.git`
-2. DockerDesktopアプリを立ち上げる
-3. `docker-compose up -d --build`
+2. リモートリポジトリの作成及び、URLの取得
+3. リモートリポジトリのURLを変更
+`git remote set-url origin 作成したリポジトリのurl`
+4. ローカルリポジトリの内容をリモートに反映させる
+`git add .`
+`git commit -m "リモートリポジトリの変更"`
+`git push origin main`
+5. DockerDesktopアプリを立ち上げる
+6. `docker-compose up -d --build`
 
 **Laravel環境構築**
 1. `docker-compose exec php bash`
@@ -64,10 +71,16 @@ php artisan migrate
 ``` bash
 php artisan db:seed
 ```
-8. 設定キャッシュのクリア
+8. ストレージリンクの作成
+```bash
+php artisan storage:link
+```
+
+9. 設定キャッシュのクリア
 ```bash
 php artisan config:clear
 ```
+StripeおよびMailtrapの環境変数を反映するため、設定キャッシュをクリアします。
 ## テスト
 
 ### テスト実行
