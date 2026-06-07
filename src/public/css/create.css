@@ -74,7 +74,6 @@ hr {
 .category__item:checked + .category__item-name{
     background-color: #FE5454;;
     color: white;
-        
 }
 
 .category__item-name {

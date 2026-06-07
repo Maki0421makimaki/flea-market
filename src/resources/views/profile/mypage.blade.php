@@ -8,7 +8,6 @@
 
     <div class="container">
         <div class="main">
-
             <div class="user-info">
                 <div class="user-info-profile">
                     <div class="user-icon">
@@ -22,20 +21,16 @@
                     <a href="/mypage/profile" class="profile-edit__link">プロフィールを編集</a>
                 </div>
             </div>
-
             <div class="menu-tab">
                 <a href="{{ route('mypage.index', ['page' => 'sell']) }}"
                     class="tab-sell-list {{ $page === 'sell' ? 'active' : '' }}">出品した商品</a>
                 <a href="{{ route('mypage.index', ['page' => "buy"]) }}"
                     class="tab-purchased-list {{ $page === 'buy' ? 'active' : '' }}">購入した商品</a>
             </div>
-
             <hr>
-
             <div class="product-list">
                 @foreach ($products as $item)
                     <div class="product-content">
-
                         @if ($page === 'buy')
                             <a href="/item/{{ $item->product->id }}" class="product-link">
                                 <div class="product-card">
@@ -55,11 +50,9 @@
                                 </div>
                             </a>
                         @endif
-
                     </div>
                 @endforeach
             </div>
-
         </div>
     </div>
 @endsection

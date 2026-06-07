@@ -44,7 +44,6 @@
                     </div>
                     <hr>
                 </div>
-
                 <div class="right-contents">
                     <div class="check-area">
                         <div class="product-price-check">
@@ -54,7 +53,6 @@
                         <div class="product-payment-check">
                             <span>支払い方法</span>
                             <div class="product-payment-check__item">{{ $profile->address }}</div>
-                            <!-- ここがわからない -->
                         </div>
                         <div class="form-btn">
                             <button class="form-btn__submit" type="submit">購入する</button>

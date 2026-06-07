@@ -22,7 +22,6 @@
                             <input type="text" id="post_code" name="post_code" value="{{ old('post_code') }}">
                         </div>
                     </div>
-
                     <div class="form__group">
                         <div class="form__group--title">
                             <label for="address">住所</label>
@@ -31,7 +30,6 @@
                             <input type="text" id="address" name="address" value="{{ old('address') }}">
                         </div>
                     </div>
-
                     <div class="form__group">
                         <div class="form__group--title">
                             <label for="building">建物名</label>
@@ -40,7 +38,6 @@
                             <input type="text" id="building" name="building" value="{{ old('building') }}">
                         </div>
                     </div>
-
                     <div class="button-area">
                         <div class="form-btn">
                             <button class="form-btn__submit" type="submit">更新する</button>

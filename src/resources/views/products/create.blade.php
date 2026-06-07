@@ -7,20 +7,17 @@
 @section('content')
     <div class="item-form">
         <div class="item-form__heading"><h1>商品の出品</h1></div>
-
         <form class="form" action="/sell" method="post" enctype="multipart/form-data">
             @csrf
             <div class="item-form__image-uploader">
                 <div class="image-uploader__header">
                     <span class="image-uploader__title">商品画像</span>
                 </div>
-
                 <div class="image-uploader__body">
                     <label class="image-uploader__button" for="image-upload-input">画像を選択する</label>
                     <input class="image-uploader__input" type="file" id="image-upload-input" name="image">
                 </div>
             </div>
-
             <div class="item-form__detail">
                 <div class="detail-title"><h2>商品の詳細</h2></div>
                 <hr>
@@ -43,11 +40,9 @@
                     </select>
                 </div>
             </div>
-
             <div class="item-form__description">
                 <div class="item-form__description-title"><h2>商品名と説明</h2></div>
                 <hr>
-
                 <div class="form__group">
                     <div class="form__group-title">
                         <label for="product-name">商品名</label>
@@ -56,7 +51,6 @@
                         <input type="text" id="product-name" name="name">
                     </div>
                 </div>
-
                 <div class="form__group">
                     <div class="form__group-title">
                         <label for="brand-name">ブランド名</label>
@@ -65,7 +59,6 @@
                         <input type="text" id="brand-name" name="brand_name">
                     </div>
                 </div>
-
                 <div class="form__group">
                     <div class="form__group-title">
                         <label for="description">商品の説明</label>
@@ -74,7 +67,6 @@
                         <input type="text" id="description" name="description">
                     </div>
                 </div>
-
                 <div class="form__group">
                     <div class="form__group-title">
                         <label for="price">販売価格</label>
@@ -87,7 +79,6 @@
             <div class="form-btn">
                 <button class="form-btn__submit" type="submit">出品する</button>
             </div>
-
             @foreach ($errors->all() as $error)
                 <p style="color:red;">{{ $error }}</p>
             @endforeach

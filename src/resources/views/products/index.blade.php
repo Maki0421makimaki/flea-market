@@ -14,16 +14,13 @@
                     'keyword' => request('keyword')
                 ]) }}"
                     class="tab-recommend {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
-
                 <a href="{{ route('items.index', [
                     'tab' => 'mylist',
                     'keyword' => request('keyword')
                 ]) }}"
                     class="tab-mylist {{ $tab === 'mylist' ? 'active' : '' }}">マイリスト</a>
             </div>
-
             <hr>
-
             <div class="product-list">
                 @foreach ($products as $product)
                     <div class="product-content">
@@ -41,7 +38,6 @@
                     </div>
                 @endforeach
             </div>
-
         </div>
     </div>
 @endsection

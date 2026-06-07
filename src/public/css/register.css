@@ -1,4 +1,4 @@
-/* ヘッダー */
+
 .header {
     background: #000;
 }
@@ -13,9 +13,6 @@
     display: flex;
     align-items: center;
 }
-
-
-/* メイン */
 
 .register-form {
     margin: 0 auto;

@@ -19,7 +19,6 @@
         </div>
     </header>
     <main>
-
         <div class="all-contents">
             <div class="login-form">
                 <div class="login-form__heading">
@@ -42,7 +41,6 @@
                             @endif
                         </p>
                     </div>
-
                     <div class="form__group">
                         <div class="form__group--title">
                             <label for="password">パスワード</label>
@@ -58,8 +56,6 @@
                             @endif
                         </p>
                     </div>
-
-
                     <div class="button-area">
                         <div class="form-btn">
                             <button class="form-btn__submit" type="submit">ログインする</button>

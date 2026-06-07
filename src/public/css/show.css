@@ -6,7 +6,7 @@
     align-items: flex-start;
 }
 
-/* 左　画像エリア */
+/* 左画像エリア */
 .image-area {
     width: 50%;
 }
@@ -25,7 +25,7 @@
 
 }
 
-/* 右　商品情報エリア */
+/* 右商品情報エリア */
 .product-detail {
     width: 50%;
     padding: 30px 20px;
